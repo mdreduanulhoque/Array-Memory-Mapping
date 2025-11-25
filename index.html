@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array Address Calculator 🧮</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Array Address Map 📐</h1>
+    <p>Click a box to see the math behind the memory address!</p>
+
+    <div class="controls">
+        <div class="input-group">Total Rows (M)<input type="number" id="rows" value="4" min="1"></div>
+        <div class="input-group">Total Cols (N)<input type="number" id="cols" value="5" min="1"></div>
+        <div class="input-group">Base Addr<input type="number" id="base" value="2000"></div>
+        <div class="input-group">Size (Bytes)<input type="number" id="size" value="4"></div>
+        <div class="input-group">Mapping
+            <select id="type">
+                <option value="row">Row Major (C/C++)</option>
+                <option value="col">Col Major (Matlab)</option>
+            </select>
+        </div>
+        <button onclick="initGrid()">🔄 Reset Grid</button>
+    </div>
+
+    <div class="main-area">
+        <div class="grid-section">
+            <div id="grid" class="grid"></div>
+        </div>
+
+        <div class="formula-panel" id="panel" style="display:none;">
+            <div class="formula-title">General Formula</div>
+            <div class="big-math" id="generalFormula"></div>
+
+            <div class="formula-title">Step-by-Step Calculation</div>
+            <div class="big-math" id="stepCalc">Select a cell...</div>
+
+            <div class="result-box" id="finalResult">Address: ?</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

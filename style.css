@@ -1,0 +1,187 @@
+:root {
+    --primary: #4f46e5;
+    --sec: #06b6d4;
+    --bg: #f8fafc;
+    --card: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: #334155;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* Controls */
+.controls {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin-top: 5px;
+    width: 80px;
+}
+
+button {
+    margin-top: auto;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+/* Main Layout */
+.main-area {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Grid Section */
+.grid-section {
+    flex: 1;
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.grid {
+    display: grid;
+    gap: 8px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid transparent;
+    font-size: 12px;
+}
+
+.cell:hover {
+    border-color: var(--sec);
+    transform: scale(1.05);
+}
+
+.cell.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+}
+
+.cell span {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+/* Formula Panel */
+.formula-panel {
+    flex: 1;
+    background: #1e293b;
+    color: #f1f5f9;
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 300px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.formula-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 5px;
+}
+
+.big-math {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #22d3ee;
+    font-weight: bold;
+}
+
+/* Cyan for dynamic numbers */
+.var-i {
+    color: #f472b6;
+}
+
+/* Pink for Row */
+.var-j {
+    color: #a78bfa;
+}
+
+/* Purple for Col */
+.result-box {
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
