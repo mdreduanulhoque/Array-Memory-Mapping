@@ -1,71 +1,47 @@
-📐 Array Address Calculator 🧮
+# Array Memory Mapping 🔢📐
 
-A visual and interactive tool to understand how 2D array memory addresses are calculated in Row-Major (C/C++) and Column-Major (MATLAB) order.
+An interactive visual tool to understand how **2D array memory
+addressing** works in both **Row Major (C/C++)** and **Column Major
+(MATLAB)** formats.
 
-🚀 Live Preview
+## 🚀 Live Demo
 
-👉 (Add your deployed link here)
+Access the project here:\
+**https://mdreduanulhoque.github.io/Array-Memory-Mapping/**
 
-✨ Features
+## 📁 Project Structure
 
-🔢 Dynamic grid creation (choose rows & columns)
+-   `index.html` --- Main UI layout\
+-   `style.css` --- App styling\
+-   `script.js` --- Logic for grid generation, highlighting, and address
+    calculation
 
-📍 Shows exact memory address of each array element
+## 🧮 Features
 
-🧠 Step-by-step formula explanation
+-   Dynamic grid generation based on user-selected rows and columns\
+-   Supports both **Row Major** and **Column Major** mapping\
+-   Shows:
+    -   General formula\
+    -   Step‑by‑step calculation\
+    -   Final computed address\
+-   Clean UI and responsive layout
 
-🔄 Supports Row Major & Column Major calculations
+## 🔧 How It Works
 
-🎨 Clean UI with interactive cell highlighting
+The address of element `A[i][j]` is calculated using:
 
-🛠️ Technologies Used
+### **Row Major**
 
-HTML
+    Address = Base + ((i × TotalCols) + j) × Size
 
-CSS
+### **Column Major**
 
-JavaScript
+    Address = Base + ((j × TotalRows) + i) × Size
 
-📂 Project Structure
-├── index.html
-├── style.css
-└── script.js
+## 📜 License
 
-🧮 How It Works
+This project is open-source and free to use.
 
-Enter total rows (M) and columns (N)
+------------------------------------------------------------------------
 
-Set Base Address & Data Size
-
-Choose mapping type (Row Major / Column Major)
-
-Click any cell ➜ see formula + step-by-step address calculation
-
-📘 Formula Used
-Row Major (C/C++)
-Address = Base + ((i × TotalCols) + j) × Size
-
-Column Major (MATLAB-style)
-Address = Base + ((j × TotalRows) + i) × Size
-
-🎯 Use Cases
-
-Students learning memory addressing
-
-Teachers explaining array storage
-
-Anyone practicing DSA / memory concepts
-
-📸 Screenshot
-
-(Add screenshot here)
-
-🤝 Contribute
-
-Feel free to fork and enhance!
-New features like 3D array visualization, animations, or address history are welcome.
-
-💛 Author
-
-Made with 😊 & faith ✨
-Reduan
+Made with ❤️ by **MD Reduanul Hoque**
